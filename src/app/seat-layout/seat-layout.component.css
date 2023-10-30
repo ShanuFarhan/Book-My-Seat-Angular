@@ -1,0 +1,40 @@
+.container{
+    
+    margin-left: 0px;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+}
+.btn{
+    width: 100px;
+    height: 30px;
+    position: absolute;
+    right: 15%;
+    margin-right: 70px;
+    margin-top: 20px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.selected {
+  filter: invert(95%) sepia(41%) saturate(6882%) hue-rotate(54deg) brightness(90%) contrast(108%);
+}
+
+.booked {
+  filter: invert(15%) sepia(99%) saturate(7455%) hue-rotate(2deg) brightness(101%) contrast(106%);
+}
+
+.seat {
+  filter: invert(0%) sepia(0%) saturate(1924%) hue-rotate(288deg) brightness(90%) contrast(106%);
+  
+}
+
+.size {
+  width: 35px;
+  height: 35px;
+}
+
+  .hover:hover {
+    cursor: pointer;
+    filter: invert(95%) sepia(41%) saturate(6882%) hue-rotate(54deg) brightness(90%) contrast(108%);
+  }
+  

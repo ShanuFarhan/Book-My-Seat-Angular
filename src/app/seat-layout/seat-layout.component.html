@@ -1,0 +1,28 @@
+<div class="container">
+<div *ngFor="let row of seats; let index1 = index" style="margin-left: 10px; display: flex; width: 100%;">
+    <div style="width: 40px; margin-top: 15px;">
+      {{ stringRef.fromCharCode(65 + index1) }}
+    </div>
+    <ng-container *ngFor="let seat of row; let index2 = index">
+      <ng-container *ngIf="seat.isZero !== 0; else emptySeat">
+        <mat-icon (click)="selectSeat(seat.id,seat)" [ngClass]="{
+            'selected': seat.isSelected,
+            'booked': seat.isBooked,
+            'available hover seat': !seat.isSelected && !seat.isBooked
+          }"
+          [style.width]="'40px'"
+          [style.height]="'40px'"
+          [style.color]="'grey'"
+        > chair</mat-icon>          
+    </ng-container>
+      <ng-template #emptySeat>
+        <span style="margin-right: 3.5%;"></span>
+      </ng-template>
+    </ng-container>
+  </div>
+  <div>
+  <button class="btn btn-danger" (click)="handleBooking()">PROCEED</button>
+</div>
+</div>
+
+<!-- 'premiumcolor': seat.type === 'Premium' -->

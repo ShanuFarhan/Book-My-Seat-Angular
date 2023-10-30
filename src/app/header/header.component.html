@@ -1,0 +1,56 @@
+<nav class="navbar navbar-light bg-dark">
+    <div class="container-fluid">
+      <h1 class="navbar-brand mb-0 h1 text-white m-2">Book <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXCL0jgAfnE4BvqHHrxeRzia2IDX3pFabGBA&usqp=CAU" alt="">show</h1>
+    </div>
+  </nav>
+  <div class="app">
+  <div class="left">
+  <div class='dropdown'>
+    <div class="ticket">
+    <label htmlFor="tickettype" >Ticket Type:</label>
+    <select id="tickettype" [(ngModel)]="ticketType" (change)="handleTicket($event)" >
+    <option value="">Ticket Type</option>
+      <option  value="Standard">Standard</option>
+      <option value="Premium">Premium[A,B]</option>
+    </select>
+</div>
+<div class="quality">
+    <label htmlFor="qty" >Quantity:</label>
+    <select id="qty" [(ngModel)]="quality" (change)="handlequality($event)">
+      <option value="qty">qty</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+      <option value="8">8</option>
+      <option value="9">9</option>
+      <option value="10">10</option>
+    </select>
+</div>
+</div>
+<app-seat-layout [ticketType]="ticketType" [quality]="quality"></app-seat-layout>
+</div>
+<div class="right">
+  <div>
+    <h4>Key to Seat Layout:</h4>
+    <ul>
+      <li>
+        <mat-icon class="available seat">chair</mat-icon>
+        <p>Available</p>
+      </li>
+      <li>
+        <mat-icon class="unavailable size">chair</mat-icon>
+        <p>Unavailable</p>
+      </li>
+      <li>
+        <mat-icon class="yourselection size">chair</mat-icon>
+        <p>Your Selection</p>
+      </li>
+    </ul>
+  </div>
+</div>
+  
+</div>
